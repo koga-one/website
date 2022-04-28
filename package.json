@@ -1,0 +1,22 @@
+{
+  "name": "koga-one",
+  "version": "1.0.0",
+  "private": true,
+  "description": "koga-one",
+  "author": "André Koga",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.13.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
