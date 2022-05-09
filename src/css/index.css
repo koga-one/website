@@ -3,6 +3,61 @@
 @tailwind utilities;
 
 @layer base {
+  /* fira-code-regular - latin */
+  @font-face {
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/fira-code-v18-latin-regular.eot"); /* IE9 Compat Modes */
+    src: local(""),
+      url("../fonts/fira-code-v18-latin-regular.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-IE8 */ url("../fonts/fira-code-v18-latin-regular.woff2")
+        format("woff2"),
+      /* Super Modern Browsers */
+        url("../fonts/fira-code-v18-latin-regular.woff") format("woff"),
+      /* Modern Browsers */ url("../fonts/fira-code-v18-latin-regular.ttf")
+        format("truetype"),
+      /* Safari, Android, iOS */
+        url("../fonts/fira-code-v18-latin-regular.svg#FiraCode") format("svg"); /* Legacy iOS */
+  }
+  /* fira-code-500 - latin */
+  @font-face {
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/fira-code-v18-latin-500.eot"); /* IE9 Compat Modes */
+    src: local(""),
+      url("../fonts/fira-code-v18-latin-500.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-IE8 */ url("../fonts/fira-code-v18-latin-500.woff2")
+        format("woff2"),
+      /* Super Modern Browsers */ url("../fonts/fira-code-v18-latin-500.woff")
+        format("woff"),
+      /* Modern Browsers */ url("../fonts/fira-code-v18-latin-500.ttf")
+        format("truetype"),
+      /* Safari, Android, iOS */
+        url("../fonts/fira-code-v18-latin-500.svg#FiraCode") format("svg"); /* Legacy iOS */
+  }
+  /* fira-code-700 - latin */
+  @font-face {
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/fira-code-v18-latin-700.eot"); /* IE9 Compat Modes */
+    src: local(""),
+      url("../fonts/fira-code-v18-latin-700.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-IE8 */ url("../fonts/fira-code-v18-latin-700.woff2")
+        format("woff2"),
+      /* Super Modern Browsers */ url("../fonts/fira-code-v18-latin-700.woff")
+        format("woff"),
+      /* Modern Browsers */ url("../fonts/fira-code-v18-latin-700.ttf")
+        format("truetype"),
+      /* Safari, Android, iOS */
+        url("../fonts/fira-code-v18-latin-700.svg#FiraCode") format("svg"); /* Legacy iOS */
+  }
+
   /* inter-100 - latin */
   @font-face {
     font-family: "Inter";
@@ -220,18 +275,85 @@ body {
   background-color: #f4f0f0;
 }
 
-.k-bar-icon {
-  @apply h-10 w-10 rounded-full transition-all;
+.gatsby-resp-image-wrapper {
+  @apply overflow-hidden rounded-lg;
 }
 
-.k-bar {
-  @apply rounded-full bg-dark bg-opacity-40 p-0.5 backdrop-blur-md;
+/* width */
+::-webkit-scrollbar {
+  @apply w-3;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-kami;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply rounded-full border-4 border-solid border-kami bg-aka;
+}
+
+.k-interactable-simple {
+  @apply transition-all;
+}
+
+.k-interactable-simple:hover {
+  @apply tablet:scale-95;
+}
+
+.k-interactable-simple:active {
+  @apply scale-90 bg-opacity-100;
+}
+
+.k-interactable {
+  @apply border-aka transition-all;
+}
+
+.k-interactable:hover {
+  @apply tablet:border-b-[3px];
+}
+
+.k-interactable:active {
+  @apply scale-90 bg-opacity-100;
 }
 
 .k-bar-button {
-  @apply rounded-full py-2 px-6 font-medium lowercase transition-all;
+  @apply flex rounded-md bg-katsu font-medium lowercase transition-all;
 }
 
-.k-bar-button.active {
-  @apply bg-light font-bold text-dark;
+.k-glassy {
+  @apply bg-opacity-60 backdrop-blur-md;
+}
+
+.k-bar-button * {
+  @apply my-auto mx-auto;
+}
+
+.k-posts-year {
+  @apply mt-12 w-full rounded-md bg-aka py-1 text-center text-h3 font-black lowercase text-kami first:mt-0;
+}
+
+.k-posts-month {
+  @apply w-full rounded-md bg-kami px-2 pt-2 text-h4 font-semibold lowercase text-aka;
+}
+
+.k-posts-day {
+  @apply grid flex-grow gap-1 overflow-hidden rounded-md text-center text-txt font-light lowercase text-kami;
+}
+
+.k-posts-grid {
+  @apply flex flex-wrap gap-y-4 tablet:gap-4;
+}
+
+/* Components */
+
+.box {
+  @apply rounded-md py-2 px-4;
+}
+
+/* Projects */
+
+.project-newproj {
+  @apply text-h1;
 }

@@ -1,9 +1,9 @@
 import * as React from "react";
 import Navbar from "./navbar";
 import { graphql, useStaticQuery } from "gatsby";
-import Footer from "./footer";
+import HomeFooter from "./home-footer";
 
-const Layout = ({ pageTitle, children }) => {
+const HomeLayout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -16,7 +16,7 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div>
-      <div className="mx-[4vw] min-h-screen tablet:mx-[12vw] desktop:mx-[20vw]">
+      <div className="flex h-screen w-full flex-col">
         <title>
           {pageTitle.toUpperCase()} //{" "}
           {data.site.siteMetadata.title.toUpperCase()}
@@ -24,9 +24,9 @@ const Layout = ({ pageTitle, children }) => {
         <Navbar />
         {children}
       </div>
-      <Footer></Footer>
+      <HomeFooter></HomeFooter>
     </div>
   );
 };
 
-export default Layout;
+export default HomeLayout;
