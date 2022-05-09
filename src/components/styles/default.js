@@ -39,12 +39,7 @@ const Component = ({ data, index }) => {
         </div>
       </div>
       {TableOfContentsWrapper(mdx)}
-      <div
-        className="prose mx-auto mb-4 max-w-[80ch] rounded-lg bg-katsu bg-opacity-5 px-4 py-8 text-katsu prose-headings:font-garamond 
-        prose-headings:text-katsu prose-p:font-inter prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu 
-        prose-code:font-fira prose-code:text-katsu
-      prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:opacity-20 dark:prose-invert desktop:prose-lg desktop:mb-0 desktop:p-8"
-      >
+      <div className="prose mx-auto mb-4 max-w-[80ch] rounded-lg bg-katsu bg-opacity-5 px-4 py-8 text-katsu prose-headings:font-garamond prose-headings:text-katsu prose-p:font-inter prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:opacity-20 dark:prose-invert desktop:prose-lg desktop:mb-0 desktop:p-8">
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </div>
       <div className="prose-lg mx-auto mb-1 max-w-[80ch] desktop:sticky desktop:bottom-12 desktop:h-0">

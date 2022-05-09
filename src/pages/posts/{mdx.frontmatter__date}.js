@@ -1,11 +1,11 @@
 import * as React from "react";
-import { lazy, Suspense } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import Loading from "../../components/loading";
+import Component from "../../components/styles/default";
 
 const Post = ({ data }) => {
-  const Component = lazy(() =>
+  /*const Component = lazy(() =>
     import("../../components/styles/" + data.mdx.slug.split("/").shift())
   );
 
@@ -17,6 +17,15 @@ const Post = ({ data }) => {
           index={GetIndex(data.mdx.id, data.allMdx.edges)}
         />
       </Suspense>
+    </Layout>
+  );*/
+
+  return (
+    <Layout pageTitle={data.mdx.frontmatter.title}>
+      <Component
+        data={data}
+        index={GetIndex(data.mdx.id, data.allMdx.edges)}
+      ></Component>
     </Layout>
   );
 };
