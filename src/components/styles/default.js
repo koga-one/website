@@ -79,7 +79,7 @@ function TableOfContents(object) {
             "#" +
             object.title
               .toLowerCase()
-              .replace(/[|\[\]&;$%@"<>()+,!?.]/g, "")
+              .replace(/[|[\]&;$%@"<>()+,!?.]/g, "")
               .replace(/ /g, "-")
           }
         >
@@ -96,7 +96,7 @@ function TableOfContents(object) {
             "#" +
             object.title
               .toLowerCase()
-              .replace(/[|\[\]&;$%@"<>()+,!?.]/g, "")
+              .replace(/[|[\]&;$%@"<>()+,!?.]/g, "")
               .replace(/ /g, "-")
           }
         >
