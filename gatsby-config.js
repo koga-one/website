@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: `https://www.koga.one`,
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
