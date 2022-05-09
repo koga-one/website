@@ -6,7 +6,7 @@ import GridLink from "../components/grid-link";
 const Index = ({ data }) => {
   return (
     <HomeLayout pageTitle="Home">
-      <h1 className="mt-40 text-center font-garamond text-d3 font-black tablet:text-d2 desktop:text-d1">
+      <h1 className="mt-32 text-center font-garamond text-d3 font-black tablet:text-d2 desktop:text-d1">
         koga
         <span className="text-aka">.</span>
         one

@@ -1,31 +1,16 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
-import Loading from "../../components/loading";
-import Component from "../../components/styles/default";
+import loadable from "@loadable/component";
 
 const Post = ({ data }) => {
-  /*const Component = lazy(() =>
+  const Component = loadable(() =>
     import("../../components/styles/" + data.mdx.slug.split("/").shift())
   );
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <Suspense fallback={<Loading />}>
-        <Component
-          data={data}
-          index={GetIndex(data.mdx.id, data.allMdx.edges)}
-        />
-      </Suspense>
-    </Layout>
-  );*/
-
-  return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
-      <Component
-        data={data}
-        index={GetIndex(data.mdx.id, data.allMdx.edges)}
-      ></Component>
+      <Component data={data} index={GetIndex(data.mdx.id, data.allMdx.edges)} />
     </Layout>
   );
 };
