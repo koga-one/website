@@ -1,13 +1,19 @@
 module.exports = {
   siteMetadata: {
     title: "k.o",
-    siteUrl: `https://www.koga.one`,
+    siteUrl: `https://koga.one`,
   },
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `koga-one`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

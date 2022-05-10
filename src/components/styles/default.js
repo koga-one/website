@@ -2,6 +2,7 @@ import * as React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { Link } from "gatsby";
 import Form from "../contact";
+import DisqusTemplate from "../disqus";
 
 const Component = ({ data, index }) => {
   const mdx = data.mdx;
@@ -48,6 +49,11 @@ const Component = ({ data, index }) => {
           <Form></Form>
         </div>
       </div>
+      <DisqusTemplate
+        pathname={window.location.pathname}
+        id={mdx.id}
+        title={mdx.frontmatter.title}
+      ></DisqusTemplate>
       <div className="prose-lg mx-auto mb-1 max-w-[80ch] desktop:sticky desktop:bottom-12 desktop:h-0">
         <div className="invisible m-0 mb-1 flex h-0 w-0 gap-x-1 p-0 desktop:visible desktop:m-auto desktop:h-auto desktop:w-auto">
           {PreviousPost(edge.previous)}

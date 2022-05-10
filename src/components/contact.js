@@ -27,8 +27,8 @@ const Form = () => {
         />
         <input
           className="k-inputfield"
-          type="text"
-          name="replyemail"
+          type="email"
+          name="email"
           placeholder="Your email"
         />
         <button className="k-inputsend" type="submit">
