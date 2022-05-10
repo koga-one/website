@@ -15,7 +15,6 @@ const Index = ({ data }) => {
         {data.allMdx.nodes.map((node) => (
           <GridLink
             title={node.frontmatter.title}
-            text={node.frontmatter.preview}
             href={"/posts/" + node.frontmatter.date}
             proj={node.frontmatter.hero_image}
             day={node.frontmatter.date.split("-")[2]}
@@ -32,7 +31,6 @@ export const query = graphql`
       nodes {
         frontmatter {
           date
-          preview
           title
           hero_image {
             childImageSharp {

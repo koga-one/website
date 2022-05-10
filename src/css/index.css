@@ -294,6 +294,14 @@ body {
   @apply rounded-full border-4 border-solid border-kami bg-aka;
 }
 
+.k-inputfield {
+  @apply rounded-md bg-katsu p-2 px-4 text-kami placeholder:text-kami placeholder:opacity-70;
+}
+
+.k-inputsend {
+  @apply rounded-md bg-aka p-2 px-4 text-left font-medium text-kami;
+}
+
 .k-interactable-simple {
   @apply transition-all;
 }

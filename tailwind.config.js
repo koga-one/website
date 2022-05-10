@@ -25,7 +25,7 @@ module.exports = {
       h1: ["66px", { lineHeight: "78px" }],
       h2: "50px",
       h3: "38px",
-      h4: "30px",
+      h4: ["30px", { lineHeight: "38px" }],
       h5: "22px",
       h6: "18px",
     },

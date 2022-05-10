@@ -52,7 +52,6 @@ function CreateButton(node) {
       />,
       <GridLink
         title={node.frontmatter.title}
-        text={node.frontmatter.preview}
         href={node.frontmatter.date}
         proj={node.frontmatter.hero_image}
         day={currentDate[2]}
@@ -68,7 +67,6 @@ function CreateButton(node) {
       />,
       <GridLink
         title={node.frontmatter.title}
-        text={node.frontmatter.preview}
         href={node.frontmatter.date}
         proj={node.frontmatter.hero_image}
         day={currentDate[2]}
@@ -80,7 +78,6 @@ function CreateButton(node) {
     return [
       <GridLink
         title={node.frontmatter.title}
-        text={node.frontmatter.preview}
         href={node.frontmatter.date}
         proj={node.frontmatter.hero_image}
         day={currentDate[2]}
@@ -95,7 +92,6 @@ export const query = graphql`
       nodes {
         frontmatter {
           date
-          preview
           title
           hero_image {
             childImageSharp {
