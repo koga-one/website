@@ -44,20 +44,23 @@ const Component = ({ data, index }) => {
       <div className="prose mx-auto mb-4 max-w-[80ch] rounded-lg bg-katsu bg-opacity-5 px-4 py-8 text-katsu prose-headings:font-garamond prose-headings:text-katsu prose-p:font-inter prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:opacity-20 dark:prose-invert desktop:prose-lg desktop:mb-1 desktop:p-8">
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </div>
-      <div className="prose mx-auto mb-4 flex max-w-[80ch] rounded-lg bg-katsu bg-opacity-5 px-4 py-8 text-katsu desktop:prose-lg desktop:mb-0 desktop:p-8">
-        <div className="mx-auto">
-          <Form></Form>
-        </div>
-      </div>
-      <DisqusTemplate
-        pathname={window.location.pathname}
-        id={mdx.id}
-        title={mdx.frontmatter.title}
-      ></DisqusTemplate>
-      <div className="prose-lg mx-auto mb-1 max-w-[80ch] desktop:sticky desktop:bottom-12 desktop:h-0">
+      <div className="prose-lg mx-auto mb-1 max-w-[80ch] desktop:sticky desktop:bottom-12 desktop:my-0 desktop:h-0">
         <div className="invisible m-0 mb-1 flex h-0 w-0 gap-x-1 p-0 desktop:visible desktop:m-auto desktop:h-auto desktop:w-auto">
           {PreviousPost(edge.previous)}
           {NextPost(edge.next)}
+        </div>
+      </div>
+      <div className="prose mx-auto mb-4 max-w-[80ch] rounded-lg bg-katsu bg-opacity-5 py-8 px-4 text-katsu prose-headings:font-garamond prose-p:font-inter prose-a:font-inter prose-a:font-normal prose-a:underline-offset-1 hover:prose-a:no-underline desktop:prose-lg desktop:mb-1 desktop:rounded-lg desktop:p-8">
+        <h2>Comments</h2>
+        <DisqusTemplate
+          pathname={window.location.pathname}
+          id={mdx.id}
+          title={mdx.frontmatter.title}
+        ></DisqusTemplate>
+      </div>
+      <div className="prose mx-auto mb-4 flex max-w-[80ch] rounded-lg bg-aka bg-opacity-10 px-4 py-8 text-katsu desktop:prose-lg desktop:mb-1 desktop:p-8">
+        <div className="mx-auto">
+          <Form></Form>
         </div>
       </div>
     </article>

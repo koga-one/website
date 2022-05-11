@@ -24,7 +24,7 @@ module.exports = {
       d3: ["90px", { lineHeight: "102px" }],
       h1: ["66px", { lineHeight: "78px" }],
       h2: "50px",
-      h3: "38px",
+      h3: ["38px", { lineHeight: "42px" }],
       h4: ["30px", { lineHeight: "38px" }],
       h5: "22px",
       h6: "18px",

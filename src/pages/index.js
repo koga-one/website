@@ -1,7 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import HomeLayout from "../components/home-layout";
-import GridLink from "../components/grid-link";
 
 const Index = ({ data }) => {
   return (
@@ -11,16 +10,7 @@ const Index = ({ data }) => {
         <span className="text-aka">.</span>
         one
       </h1>
-      <div className="mx-auto mb-20 flex grow place-items-center justify-center px-4">
-        {data.allMdx.nodes.map((node) => (
-          <GridLink
-            title={node.frontmatter.title}
-            href={"/posts/" + node.frontmatter.date}
-            proj={node.frontmatter.hero_image}
-            day={node.frontmatter.date.split("-")[2]}
-          />
-        ))}
-      </div>
+      <div className="mx-auto mb-20 flex grow place-items-center justify-center px-4"></div>
     </HomeLayout>
   );
 };
@@ -32,11 +22,6 @@ export const query = graphql`
         frontmatter {
           date
           title
-          hero_image {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
         }
         id
         slug

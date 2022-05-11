@@ -5,7 +5,7 @@ import sun from "../images/sun.svg";
 
 const Navbar = () => {
   return (
-    <nav className="fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 flex-row items-stretch gap-1 font-inter text-kami tablet:bottom-10 desktop:bottom-12">
+    <nav className="fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 flex-row items-stretch gap-1 font-inter text-kami desktop:bottom-12">
       <Link
         className="k-interactable h-12 w-12 overflow-hidden rounded-md"
         to="/"

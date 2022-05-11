@@ -19,11 +19,11 @@ const Form = () => {
           name="name"
           placeholder="What should I call you?"
         />
-        <input
-          className="k-inputfield"
-          type="text"
+        <textarea
+          className="k-inputfield h-32"
           name="message"
-          placeholder="I'm all ears!"
+          rows="4"
+          placeholder="What's your message?"
         />
         <input
           className="k-inputfield"

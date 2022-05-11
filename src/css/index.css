@@ -279,6 +279,14 @@ body {
   @apply overflow-hidden rounded-lg;
 }
 
+.new-post-true {
+  @apply bg-aka bg-opacity-70;
+}
+
+.new-post-false {
+  @apply bg-katsu bg-opacity-70;
+}
+
 /* width */
 ::-webkit-scrollbar {
   @apply w-3;
@@ -315,15 +323,15 @@ body {
 }
 
 .k-interactable {
-  @apply border-aka transition-all;
+  @apply transition-all;
 }
 
 .k-interactable:hover {
-  @apply tablet:border-b-[3px];
+  @apply border-b-aka tablet:border-b-[3px];
 }
 
 .k-interactable:active {
-  @apply scale-90 bg-opacity-100;
+  @apply scale-90 border-b-aka bg-opacity-100;
 }
 
 .k-bar-button {
