@@ -4,11 +4,11 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const HomeFooter = () => {
   return (
-    <div className="relative bg-katsu tablet:h-36">
-      <div className="py-10 tablet:py-0">
-        <div className="py-1 text-center font-medium text-kami tablet:absolute tablet:left-1/4 tablet:bottom-1/2 tablet:flex tablet:-translate-x-1/2 tablet:translate-y-1/2">
+    <div className="relative bg-katsu desktop:h-36">
+      <div className="py-10 desktop:py-0">
+        <div className="py-2 text-center font-medium text-kami desktop:absolute desktop:left-1/4 desktop:bottom-1/2 desktop:flex desktop:-translate-x-1/2 desktop:translate-y-1/2">
           <Link
-            className="k-interactable mx-4 py-2"
+            className="k-interactable-simple mx-2 mt-2 self-end rounded-md px-2 pb-2"
             to="https://twitter.com/koga_one"
           >
             <StaticImage
@@ -18,7 +18,7 @@ const HomeFooter = () => {
             />
           </Link>
           <Link
-            className="k-interactable mx-4 py-2"
+            className="k-interactable-simple mx-2 mt-2 self-end rounded-md px-2 pb-2"
             to="https://www.instagram.com/koga.one_/"
           >
             <StaticImage
@@ -28,12 +28,12 @@ const HomeFooter = () => {
             />
           </Link>
         </div>
-        <p className="py-1 text-center font-medium text-kami tablet:absolute tablet:left-3/4 tablet:bottom-1/2 tablet:flex tablet:-translate-x-1/2 tablet:translate-y-1/2">
+        <p className="py-2 text-center font-medium text-kami desktop:absolute desktop:left-3/4 desktop:bottom-1/2 desktop:flex desktop:-translate-x-1/2 desktop:translate-y-1/2">
           The moon is beautiful, isn't it?
         </p>
       </div>
-      <div className="h-[1px] bg-kami bg-opacity-10 tablet:invisible"></div>
-      <div className="h-28 bg-katsu"></div>
+      <div className="h-[1px] bg-kami bg-opacity-10 desktop:invisible"></div>
+      <div className="tablet:h-32A h-28 bg-katsu"></div>
     </div>
   );
 };

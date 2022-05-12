@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+
 @layer base {
   /* fira-code-regular - latin */
   @font-face {
@@ -271,8 +273,24 @@
   }
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  @apply w-3;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-kami;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full border-4 border-solid border-kami bg-aka;
+}
+
+/* Global styles */
+
 body {
-  background-color: #f4f0f0;
+  @apply overflow-x-hidden bg-kami font-inter font-normal text-katsu;
 }
 
 .gatsby-resp-image-wrapper {
@@ -287,20 +305,7 @@ body {
   @apply bg-katsu bg-opacity-70;
 }
 
-/* width */
-::-webkit-scrollbar {
-  @apply w-3;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  @apply bg-kami;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  @apply rounded-full border-4 border-solid border-kami bg-aka;
-}
+/* Components */
 
 .k-inputfield {
   @apply rounded-md bg-katsu p-2 px-4 text-kami placeholder:text-kami placeholder:opacity-70;
@@ -322,54 +327,24 @@ body {
   @apply scale-90 bg-opacity-100;
 }
 
-.k-interactable {
+.k-interactable-simple {
   @apply transition-all;
-}
-
-.k-interactable:hover {
-  @apply border-b-aka tablet:border-b-[3px];
-}
-
-.k-interactable:active {
-  @apply scale-90 border-b-aka bg-opacity-100;
-}
-
-.k-bar-button {
-  @apply flex rounded-md bg-katsu font-medium lowercase transition-all;
 }
 
 .k-glassy {
   @apply bg-opacity-60 backdrop-blur-md;
 }
 
-.k-bar-button * {
-  @apply my-auto mx-auto;
+.k-prose-big {
+  @apply prose prose-lg max-w-none prose-headings:font-garamond prose-headings:text-katsu prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:border-katsu prose-hr:opacity-20 tablet:prose-xl desktop:prose-2xl;
 }
 
-.k-posts-year {
-  @apply mt-12 w-full rounded-md bg-aka py-1 text-center text-h3 font-black lowercase text-kami first:mt-0;
+.k-prose {
+  @apply prose max-w-none prose-headings:font-garamond prose-headings:text-katsu prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:border-katsu prose-hr:opacity-20 tablet:prose-lg desktop:prose-xl;
 }
 
-.k-posts-month {
-  @apply w-full rounded-md bg-kami px-2 pt-2 text-h4 font-semibold lowercase text-aka;
-}
-
-.k-posts-day {
-  @apply grid flex-grow gap-1 overflow-hidden rounded-md text-center text-txt font-light lowercase text-kami;
-}
-
-.k-posts-grid {
-  @apply flex flex-wrap gap-y-4 tablet:gap-4;
-}
-
-/* Components */
-
-.box {
-  @apply rounded-md py-2 px-4;
+.k-wrapper {
+  @apply rounded-lg bg-katsu bg-opacity-5 px-4 py-8 desktop:p-8;
 }
 
 /* Projects */
-
-.project-newproj {
-  @apply text-h1;
-}

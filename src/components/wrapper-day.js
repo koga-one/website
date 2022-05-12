@@ -8,7 +8,7 @@ const DayWrapper = ({ day, node, last }) => {
   return (
     <Link
       className={
-        "k-interactable flex grow flex-wrap gap-4 self-center rounded-lg p-4 font-inter font-normal" +
+        "k-interactable-simple flex grow flex-wrap gap-4 self-center rounded-lg p-4 font-normal" +
         wrapperDay +
         newPost
       }
@@ -17,7 +17,7 @@ const DayWrapper = ({ day, node, last }) => {
       <div className="self-center font-garamond text-h3 font-semibold text-kami">
         {day}
       </div>
-      <div className="self-center font-inter text-h6 text-kami">
+      <div className="self-center text-h6 text-kami">
         {node.frontmatter.title}
       </div>
     </Link>

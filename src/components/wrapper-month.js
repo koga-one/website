@@ -2,7 +2,7 @@ import * as React from "react";
 
 const MonthWrapper = ({ month, children }) => {
   return (
-    <div className="flex grow flex-wrap gap-4 rounded-lg bg-katsu bg-opacity-5 px-4 py-8 desktop:p-8">
+    <div className="k-wrapper flex grow flex-wrap gap-4">
       <p className="m-2 self-center font-garamond text-h2 font-black">
         {months[month - 1]}
       </p>
