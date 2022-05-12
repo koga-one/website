@@ -29,15 +29,15 @@ export const query = graphql`
       edges {
         next {
           frontmatter {
-            date
             title
           }
+          slug
         }
         previous {
           frontmatter {
-            date
             title
           }
+          slug
         }
         node {
           id
