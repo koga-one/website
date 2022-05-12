@@ -1,24 +1,38 @@
 import * as React from "react";
+import { graphql } from "gatsby";
+import Page from "../components/page";
 import Layout from "../components/layout";
-import Header from "../components/header";
-import Form from "../components/contact";
 
-const About = () => {
+const About = ({ data }) => {
+  const mdx = data.allMdx.nodes[0];
+
   return (
-    <Layout pageTitle="About">
-      <Header title="About"></Header>
-      <article>
-        <div>
-          <h2 className="text-d1">ok, so you want to know more about me?</h2>
-        </div>
-        <div className="prose mx-auto mb-4 flex max-w-[80ch] rounded-lg bg-aka bg-opacity-10 px-4 py-8 text-katsu desktop:prose-lg desktop:mb-1 desktop:p-8">
-          <div className="mx-auto">
-            <Form></Form>
-          </div>
-        </div>
-      </article>
+    <Layout pageTitle={mdx.frontmatter.title}>
+      <Page
+        data={mdx}
+        styles="prose max-w-none rounded-lg bg-katsu bg-opacity-5 px-4 py-8 font-inter text-katsu prose-headings:font-garamond prose-headings:text-katsu prose-p:font-inter prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:opacity-20 dark:prose-invert desktop:prose-lg desktop:p-8"
+      />
     </Layout>
   );
 };
+
+export const query = graphql`
+  {
+    allMdx(filter: { slug: { eq: "about" } }) {
+      nodes {
+        id
+        frontmatter {
+          title
+        }
+        tableOfContents
+        timeToRead
+        wordCount {
+          words
+        }
+        body
+      }
+    }
+  }
+`;
 
 export default About;

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Form from "../contact";
 import DisqusTemplate from "../disqus";
 
-const Component = ({ data, index }) => {
+const DefaultStyle = ({ data, index }) => {
   const mdx = data.mdx;
   const edge = data.allMdx.edges[index];
 
@@ -29,7 +29,7 @@ const Component = ({ data, index }) => {
         {mdx.frontmatter.title}
       </h1>
 
-      <div className="mx-auto grid grid-cols-1 gap-1 font-inter desktop:w-[90ch]">
+      <div className="mx-auto grid grid-cols-1 gap-1 font-inter tablet:w-[75ch]">
         <div className="flex gap-1 rounded-lg desktop:bg-katsu desktop:bg-opacity-5 desktop:p-8 desktop:py-4">
           <div className="rounded-md bg-moku px-4 py-1 text-kami">
             <p className="!my-0">{mdx.frontmatter.date}</p>
@@ -86,22 +86,31 @@ function TableOfContentsWrapper(mdx) {
 
 function TableOfContents(object) {
   if (object.hasOwnProperty("items")) {
-    return (
-      <li>
-        <a
-          href={
-            "#" +
-            object.title
-              .toLowerCase()
-              .replace(/[|[\]&;$%@"<>()+,!?.]/g, "")
-              .replace(/ /g, "-")
-          }
-        >
-          {object.title}
-        </a>
-        <ul>{object.items.map((item) => TableOfContents(item))}</ul>
-      </li>
-    );
+    if (object.hasOwnProperty("title")) {
+      return (
+        <li>
+          <a
+            href={
+              "#" +
+              object.title
+                .toLowerCase()
+                .replace(/[|[\]&;$%@"<>()+,!?.]/g, "")
+                .replace(/ /g, "-")
+            }
+          >
+            {object.title}
+          </a>
+          <ul>{object.items.map((item) => TableOfContents(item))}</ul>
+        </li>
+      );
+    } else {
+      return (
+        <li>
+          <a>-</a>
+          <ul>{object.items.map((item) => TableOfContents(item))}</ul>
+        </li>
+      );
+    }
   } else {
     return (
       <li>
@@ -175,4 +184,4 @@ function SimpleNextPost(next) {
   }
 }
 
-export default Component;
+export default DefaultStyle;

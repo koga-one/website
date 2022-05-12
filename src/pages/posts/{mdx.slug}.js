@@ -25,7 +25,10 @@ function GetIndex(id, edges) {
 
 export const query = graphql`
   query ($id: String) {
-    allMdx(sort: { order: ASC, fields: frontmatter___date }) {
+    allMdx(
+      sort: { order: ASC, fields: frontmatter___date }
+      filter: { frontmatter: { type: { eq: "post" } } }
+    ) {
       edges {
         next {
           frontmatter {

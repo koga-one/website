@@ -82,7 +82,10 @@ function DayGrid(nodes, chosenMonth) {
 
 export const query = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { type: { eq: "post" } } }
+    ) {
       nodes {
         frontmatter {
           date

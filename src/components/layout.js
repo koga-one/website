@@ -16,7 +16,7 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div>
-      <div className="mx-[4vw] min-h-screen font-inter tablet:mx-[12vw] desktop:mx-[20vw]">
+      <div className="mx-[4vw] min-h-screen overflow-hidden font-inter tablet:mx-[12vw] desktop:mx-[20vw]">
         <title>
           {pageTitle.toUpperCase()} //{" "}
           {data.site.siteMetadata.title.toUpperCase()}
