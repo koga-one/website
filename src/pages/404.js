@@ -12,7 +12,7 @@ const NotFoundPage = () => {
           </p>
           <p className="text-h5">Why are you here? This page doesn't exist!</p>
           <a
-            className="k-interactable-simple rounded-md bg-katsu px-4 py-2 text-kami"
+            className="k-interactable-simple rounded-md bg-katsu px-4 py-2 text-kami dark:bg-gure dark:text-katsu"
             href="javascript:history.back()"
           >
             Go Back

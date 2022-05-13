@@ -280,17 +280,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-kami;
+  @apply bg-kami dark:bg-katsu;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-full border-4 border-solid border-kami bg-aka;
+  @apply rounded-full border-4 border-solid border-kami bg-aka dark:border-katsu;
 }
 
 /* Global styles */
 
 body {
-  @apply overflow-x-hidden bg-kami font-inter font-normal text-katsu;
+  @apply overflow-x-hidden bg-kami font-inter font-normal text-katsu dark:bg-katsu dark:text-gure;
 }
 
 .gatsby-resp-image-wrapper {
@@ -302,17 +302,17 @@ body {
 }
 
 .new-post-false {
-  @apply bg-katsu bg-opacity-70;
+  @apply bg-katsu bg-opacity-70 dark:bg-kami;
 }
 
 /* Components */
 
 .k-inputfield {
-  @apply rounded-md bg-katsu p-2 px-4 text-kami placeholder:text-kami placeholder:opacity-70;
+  @apply rounded-md bg-katsu p-2 px-4 text-kami placeholder:text-kami placeholder:opacity-70 dark:bg-gure dark:text-katsu dark:placeholder:text-katsu;
 }
 
 .k-inputsend {
-  @apply rounded-md bg-aka p-2 px-4 text-left font-medium text-kami;
+  @apply rounded-md bg-aka p-2 px-4 text-left font-medium text-kami dark:text-katsu;
 }
 
 .k-interactable-simple {
@@ -336,15 +336,20 @@ body {
 }
 
 .k-prose-big {
-  @apply prose prose-lg max-w-none prose-headings:font-garamond prose-headings:text-katsu prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:border-katsu prose-hr:opacity-20 tablet:prose-xl desktop:prose-2xl;
+  @apply prose prose-lg max-w-none prose-headings:font-garamond prose-headings:text-katsu prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-li:text-katsu prose-hr:border-katsu prose-hr:opacity-20 dark:prose-headings:text-kami dark:prose-p:text-gure dark:prose-strong:text-kami dark:prose-code:text-gure dark:prose-pre:bg-kami dark:prose-li:text-gure dark:prose-hr:border-gure tablet:prose-xl desktop:prose-2xl;
 }
 
 .k-prose {
-  @apply prose max-w-none prose-headings:font-garamond prose-headings:text-katsu prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-hr:border-katsu prose-hr:opacity-20 tablet:prose-lg desktop:prose-xl;
+  @apply prose max-w-none prose-headings:font-garamond prose-headings:text-katsu prose-p:text-katsu prose-a:text-aka hover:prose-a:no-underline prose-strong:text-katsu prose-code:font-fira prose-code:text-katsu prose-pre:bg-katsu prose-pre:bg-opacity-10 prose-li:text-katsu prose-hr:border-katsu prose-hr:opacity-20 dark:prose-headings:text-kami dark:prose-p:text-gure dark:prose-strong:text-kami dark:prose-code:text-gure dark:prose-pre:bg-kami dark:prose-li:text-gure dark:prose-hr:border-gure tablet:prose-lg desktop:prose-xl;
+}
+
+.k-prose ul a,
+.k-prose-big ul a {
+  @apply text-gure;
 }
 
 .k-wrapper {
-  @apply rounded-lg bg-katsu bg-opacity-5 px-4 py-8 desktop:p-8;
+  @apply rounded-lg bg-katsu bg-opacity-5 px-4 py-8 dark:bg-kami dark:bg-opacity-5 dark:text-gure desktop:p-8;
 }
 
 /* Projects */

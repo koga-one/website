@@ -24,7 +24,7 @@ const Layout = ({ pageTitle, children }) => {
         <Navbar />
         {children}
       </div>
-      <Footer></Footer>
+      <Footer styles="mt-8 desktop:mt-24"></Footer>
     </div>
   );
 };

@@ -19,7 +19,7 @@ const DefaultStyle = ({ data, index }) => {
       <PostWrapper previous={edge.previous} next={edge.next}>
         <PostInfo timeToRead={mdx.timeToRead} words={mdx.wordCount.words} />
         <PostTOC data={mdx} />
-        <article className="k-prose-big k-wrapper">
+        <article className="k-prose k-wrapper">
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </article>
         <PostDisqus

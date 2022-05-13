@@ -11,6 +11,7 @@ module.exports = {
     },
     colors: {
       kami: "#F4F0F0",
+      gure: "#9ba4ba",
       katsu: "#181B39",
       moku: "#3A3734",
       aka: "#F43F5E",

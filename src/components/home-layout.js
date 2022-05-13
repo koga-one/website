@@ -1,7 +1,7 @@
 import * as React from "react";
 import Navbar from "./navbar";
 import { graphql, useStaticQuery } from "gatsby";
-import HomeFooter from "./home-footer";
+import Footer from "./footer";
 
 const HomeLayout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +24,7 @@ const HomeLayout = ({ pageTitle, children }) => {
         <Navbar />
         {children}
       </div>
-      <HomeFooter></HomeFooter>
+      <Footer></Footer>
     </div>
   );
 };

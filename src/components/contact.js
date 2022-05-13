@@ -5,8 +5,8 @@ import { StaticImage } from "gatsby-plugin-image";
 const Form = () => {
   return (
     <div className="k-wrapper prose flex max-w-none bg-aka desktop:prose-lg">
-      <div className="mx-auto flex flex-col gap-4 text-katsu">
-        <p className="!my-0 text-center font-garamond text-h3 font-bold">
+      <div className="mx-auto flex flex-col gap-4">
+        <p className="!my-0 text-center font-garamond text-h3 font-bold dark:text-kami">
           Contact Me
         </p>
         <form
