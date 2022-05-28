@@ -14,6 +14,8 @@ function TableOfContentsWrapper(data) {
         </ul>
       </div>
     );
+  } else {
+    return <span className="absolute"></span>;
   }
 }
 

@@ -16,7 +16,7 @@ const HomeLayout = ({ pageTitle, children }) => {
 
   return (
     <div>
-      <div className="flex h-screen w-full flex-col">
+      <div className="home flex min-h-screen w-full flex-col">
         <title>
           {pageTitle.toUpperCase()} //{" "}
           {data.site.siteMetadata.title.toUpperCase()}

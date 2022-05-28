@@ -7,13 +7,14 @@ import Header from "../header";
 import PostTop from "../modules/post-top";
 import PostInfo from "../modules/post-info";
 import PostTOC from "../modules/post-toc";
+import Layout from "../layout";
 
 const DefaultStyle = ({ data, index }) => {
   const mdx = data.mdx;
   const edge = data.allMdx.edges[index];
 
   return (
-    <div>
+    <Layout pageTitle={mdx.frontmatter.title}>
       <PostTop />
       <Header title={mdx.frontmatter.title} />
       <PostWrapper previous={edge.previous} next={edge.next}>
@@ -29,7 +30,7 @@ const DefaultStyle = ({ data, index }) => {
         />
         <Form />
       </PostWrapper>
-    </div>
+    </Layout>
   );
 };
 

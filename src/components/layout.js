@@ -3,7 +3,7 @@ import Navbar from "./navbar";
 import { graphql, useStaticQuery } from "gatsby";
 import Footer from "./footer";
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, children, className }) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -15,8 +15,8 @@ const Layout = ({ pageTitle, children }) => {
   `);
 
   return (
-    <div>
-      <div className="mx-[4vw] min-h-screen tablet:mx-[12vw] desktop:mx-[20vw]">
+    <div className={className}>
+      <div className="min-h-screen px-[4vw] tablet:px-[12vw] desktop:px-[20vw]">
         <title>
           {pageTitle.toUpperCase()} //{" "}
           {data.site.siteMetadata.title.toUpperCase()}

@@ -302,7 +302,7 @@ body {
 }
 
 .new-post-false {
-  @apply bg-katsu bg-opacity-70 dark:bg-kami;
+  @apply bg-katsu bg-opacity-30 dark:bg-kami dark:bg-opacity-30;
 }
 
 /* Components */
@@ -353,3 +353,15 @@ body {
 }
 
 /* Projects */
+
+.home {
+  @apply bg-[#010712];
+}
+
+.wrapper-day-pensamentos.new-post-true {
+  @apply bg-[#4C1313];
+}
+
+.wrapper-day-pensamentos {
+  @apply bg-[#262626];
+}

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
 import loadable from "@loadable/component";
 
 const Post = ({ data }) => {
@@ -9,9 +8,7 @@ const Post = ({ data }) => {
   );
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
-      <Component data={data} index={GetIndex(data.mdx.id, data.allMdx.edges)} />
-    </Layout>
+    <Component data={data} index={GetIndex(data.mdx.id, data.allMdx.edges)} />
   );
 };
 
@@ -51,6 +48,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        extra
       }
       timeToRead
       tableOfContents
