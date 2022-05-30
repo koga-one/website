@@ -3,7 +3,7 @@ import * as React from "react";
 const MonthWrapper = ({ month, children }) => {
   return (
     <div className="k-wrapper flex grow flex-wrap gap-4">
-      <p className="m-2 self-center font-garamond text-h2 font-black">
+      <p className="m-2 self-center font-garamond text-h3 font-black">
         {months[month - 1]}
       </p>
       {children}

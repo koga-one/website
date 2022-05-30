@@ -358,10 +358,11 @@ body {
   @apply bg-[#eef4ff] dark:bg-[#010712];
 }
 
-.wrapper-day-pensamentos.new-post-true {
-  @apply bg-[#4C1313];
+.newpost-true {
+  position: relative;
 }
 
-.wrapper-day-pensamentos {
-  @apply bg-[#262626];
+.newpost-true::after {
+  @apply absolute -top-1 -right-1 rounded-md bg-ki px-1 font-bold text-katsu;
+  content: "new";
 }
