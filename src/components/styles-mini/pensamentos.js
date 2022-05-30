@@ -9,7 +9,7 @@ const PensamentosMini = ({ day, last, frontmatter, link }) => {
         to={link}
       >
         <iframe
-          className="h-[88px] w-full rounded-lg tablet:-m-4 tablet:mr-0 tablet:h-[80px] tablet:w-[80px]"
+          className="h-[80px] w-full rounded-lg tablet:-m-4 tablet:mr-0 tablet:w-[80px]"
           src={frontmatter.extra}
           frameBorder="0"
           allowfullscreen=""
