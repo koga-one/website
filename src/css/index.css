@@ -355,7 +355,7 @@ body {
 /* Projects */
 
 .home {
-  @apply bg-[#010712];
+  @apply bg-[#eef4ff] dark:bg-[#010712];
 }
 
 .wrapper-day-pensamentos.new-post-true {
