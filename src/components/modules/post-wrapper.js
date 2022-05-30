@@ -53,8 +53,8 @@ function SimplePreviousPost(previous) {
   if (previous !== null) {
     return (
       <Link to={"/posts/" + previous.slug} className="text-kami">
-        <p className="k-interactable-simple k-glassy rounded-md bg-katsu px-4 py-1">
-          🡲
+        <p className="k-interactable-simple k-glassy rounded-md bg-katsu px-4 py-1 font-fira">
+          -{">"}
         </p>
       </Link>
     );
@@ -65,8 +65,8 @@ function SimpleNextPost(next) {
   if (next !== null) {
     return (
       <Link to={"/posts/" + next.slug} className="text-kami">
-        <p className="k-interactable-simple k-glassy rounded-md bg-katsu px-4 py-1">
-          🡰
+        <p className="k-interactable-simple k-glassy rounded-md bg-katsu px-4 py-1 font-fira">
+          {"<"}-
         </p>
       </Link>
     );

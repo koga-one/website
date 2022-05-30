@@ -31,7 +31,7 @@ const PensamentosStyle = ({ data, index }) => {
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
-        <article className="k-prose k-wrapper text-center">
+        <article className="k-prose k-wrapper text-center font-fira">
           <div className="py-2">
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </div>

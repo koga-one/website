@@ -18,7 +18,7 @@ const PensamentosMini = ({ day, last, frontmatter, link }) => {
         <div className="self-center font-garamond text-h3 font-semibold text-katsu dark:text-gure">
           {day}
         </div>
-        <div className="self-center text-h6 text-katsu dark:text-gure">
+        <div className="self-center font-fira text-h6 text-katsu dark:text-gure">
           {frontmatter.title}
         </div>
       </Link>
