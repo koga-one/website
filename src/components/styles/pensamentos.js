@@ -17,8 +17,10 @@ const PensamentosStyle = ({ data, index }) => {
       <PostTop />
       <Header title={mdx.frontmatter.title} />
       <PostWrapper previous={edge.previous} next={edge.next}>
-        <div className="pb-4 text-center">
-          <i>volume might be loud</i>
+        <div className="pb-4 text-center opacity-50">
+          <i>
+            <b>scroll down for translation.</b> volume might be loud.
+          </i>
         </div>
         <iframe
           className="rounded-lg"
@@ -30,9 +32,9 @@ const PensamentosStyle = ({ data, index }) => {
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
         <article className="k-prose k-wrapper text-center">
-          <br />
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-          <br />
+          <div className="py-2">
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </div>
         </article>
       </PostWrapper>
     </Layout>
