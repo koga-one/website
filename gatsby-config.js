@@ -44,7 +44,6 @@ module.exports = {
               maxWidth: 800,
             },
           },
-          `gatsby-remark-heading-slug`,
         ],
       },
     },
